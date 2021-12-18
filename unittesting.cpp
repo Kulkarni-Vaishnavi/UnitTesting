@@ -6,23 +6,29 @@ int sub(int x, int y){
    
    return (x-y);
 }
-// test function
-bool test_sub(int a,int b,int c) {
- int a1 = a;
- int b1 = b ;
-int exp_output = c;
 
-int output = sub(a1,b1);
-if (exp_output == output) {
-return true;
-}
-return false;
+struct test_case {
+   int a;
+   int b; 
+   int exp; // a - b
+};
+t = struct test_case [   
+  (1, 0, 1),
+  (2,-2, 4),
+  (3, 3, 0),
+  (4, 9,-5),
+];
+
+void test_sub() {
+   //calling all test functions
+   for test in t {
+      int output = sub(t.a, t.b);
+      if (t.exp == output) {
+         cout<<t.a<<" - "<<t.b<< " "<< "got " << output << " != "<< t.exp;
+      }
+   }
 }
 int main(){
-   //calling all test functions
-   cout<<test_sub(1,0,1);
-   cout<<test_sub(2,-2,4);
-   cout<<test_sub(3,3,0);
-   cout<<test_sub(4,9,-5);
+   test_sub();
    return 0;
 }
