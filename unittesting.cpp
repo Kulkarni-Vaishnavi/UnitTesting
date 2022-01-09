@@ -30,6 +30,7 @@ void test_sub() {
 }
 int main(){
    test_sub();
-   printf("Hello world");
+   printf("Hello world\n");
+   printf("Hello");
    return 0;
 }
