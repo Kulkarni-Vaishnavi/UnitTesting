@@ -30,5 +30,6 @@ void test_sub() {
 }
 int main(){
    test_sub();
+   printf("Hello world");
    return 0;
 }
